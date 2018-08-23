@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ascroll | library</title>
+		<link rel="stylesheet" href="../css/level.min.css">
+		<link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="is-wrapper">
+        <h1 class="is-text-center is-text-bolder margin-v-3 title animated shake infinite"><span class="is-text-primary">Animate CSS</span> & Vanilla <span class="is-text-warning">JS</span></h1>
+        <row class="is-distributed is-wrapper tablet-is-half">
+            <a href="https://github.com/JorgeAntrax/ascroll" class="button is-dark is-rounded"><icon><i class="fa fa-github"></i></icon> Ver en Github</a>
+            <a href="https://github.com/JorgeAntrax/ascroll/archive/master.zip" class="button is-primary-invert is-rounded"><icon><i class="fa fa-download"></i></icon> Descargar librería</a>
+		</row>
+    </div>
+    <row class="is-wrapper is-center">
+		<div class="is-text-center tablet-14 margin-v-3">Esta pequeña librería tiene como finalidad ayudarte a implementar animaciones con la librería <a href="https://daneden.github.io/animate.css">animate css</a> sin la necesidad de utilizar jquery para aplicar animaciones tomando como referencía el scroll de tu página web.</div>
+    </row>
+    <div class="is-wrapper">
+        <div class="padding-v-2">   
+            <h4 class="is-text-primary margin-b-1">Como empezar</h4>
+            <p>Por el momento este <strong>pequeño</strong> <code>script</code> no esta subido a <strong>NPM</strong>, asi que por ahora descargate el fichero <code>ascroll.min.js</code> y realiza el enlace correspondiente al script.</p>
+            <snippet class="margin-v-2">
+                <pre><tg>&ltscript</tg><at> src=</at><vat>"js/ascroll.min.js"</vat><tg>&gt</tg></pre>
+            </snippet>
+            <p>Es todo ahora dispones de varias opciones de configuración:</p>
+            <ol>
+                <li><code>clases</code></li>
+                <li><code>@animate</code></li>
+                <li><code>@scroll</code></li>
+            </ol>
+            <p class="margin-b-1">Las clases se añaden de manera normal, <strong>excepto</strong> la clase que aplica la animación de la librería , revisa la documentación de la librería animate en la cúal dispones de las siguientes opciones:</p>
+            <ol>
+                <li><code>animated</code> Clase que indica que ese elemento será animado.</li>
+                <li><code>infinite</code> Clase que indica que la animacion una vez asignada será infinita.</li>
+                <li><code>delay</code> Clases para retrasar la animación</li>
+            </ol>
+            <p class="margin-b-1">El atributo <code>@animate</code> recibe como valor el nombre de la animación que deseas aplicar a ese elemento</p>
+            <p class="margin-b-1">El atributo <code>@scroll</code> recibe como valor un número por ejemplo <strong>200</strong>, y significa que cuando el valor de la propiedad <code>scrollY</code> del objeto <code class="is-text-info">window</code> sea igual 200 se añadirá la animación que definas en el atributo <code>@animate</code></p>
+            <h4 class="is-text-primary margin-b-1">Veamos un ejemplo.</h4>
+            <div class="margin-v-2">
+                <div class="animated" @animate="wobble" @scroll="400">
+                    <p class="is-large">Efecto wobble con 400px de scroll</p>
+                </div>
+            </div>
+            <snippet class="margin-b-2">
+                <pre><tg>&ltdiv</tg><at> class=</at><vat>"animated"</vat><at> @animate=</at><vat>"wobble"</vat><at> @scroll=</at><vat>"400"</vat><tg>&gt<br>    &ltp&gt</tg><span>Lorem ipsum dolor sit amet.</span><tg>&lt/p&gt</tg><br><tg>&lt/div&gt</tg></pre>
+            </snippet>
+            <h4 class="is-text-primary margin-b-1">Veamos más ejemplos</h4>
+            <div class="margin-v-2">
+                <div class="animated" @animate="bounceInDown" @scroll="100">
+                    <p class="is-large">Efecto bounceInDown con 100px de scroll</p>
+                </div>
+            </div>
+            <snippet class="margin-b-2">
+                <pre><tg>&ltdiv</tg><at> class=</at><vat>"animated"</vat><at> @animate=</at><vat>"bounceInDown"</vat><at> @scroll=</at><vat>"100"</vat><tg>&gt<br>    &ltp&gt</tg><span>Lorem ipsum dolor sit amet.</span><tg>&lt/p&gt</tg><br><tg>&lt/div&gt</tg></pre>
+            </snippet>
+            <div class="margin-v-2">
+                <div class="animated" @animate="hinge" @scroll="300">
+                    <p class="is-large">Efecto hinge con 300px de scroll</p>
+                </div>
+            </div>
+            <snippet class="margin-b-2">
+                <pre><tg>&ltdiv</tg><at> class=</at><vat>"animated"</vat><at> @animate=</at><vat>"hinge"</vat><at> @scroll=</at><vat>"300"</vat><tg>&gt<br>    &ltp&gt</tg><span>Lorem ipsum dolor sit amet.</span><tg>&lt/p&gt</tg><br><tg>&lt/div&gt</tg></pre>
+            </snippet>
+            <div class="margin-v-2">
+                <div class="animated" @animate="slideInUp" @scroll="200">
+                    <p class="is-large">Efecto slideInUp con 200px de scroll</p>
+                </div>
+            </div>
+            <snippet class="margin-b-2">
+                <pre><tg>&ltdiv</tg><at> class=</at><vat>"animated"</vat><at> @animate=</at><vat>"slideInUp"</vat><at> @scroll=</at><vat>"200"</vat><tg>&gt<br>    &ltp&gt</tg><span>Lorem ipsum dolor sit amet.</span><tg>&lt/p&gt</tg><br><tg>&lt/div&gt</tg></pre>
+            </snippet>
+            <h4 class="is-text-primary margin-b-1">Ahora un poco de contenido <strong>random</strong> para que puedas ver todos los ejemplos</h4>
+            <p class="is-text-jutify margin-b-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, placeat ducimus quidem libero ratione vitae quia quis suscipit eos vel, at nobis ullam, quas itaque. Officiis maxime, sunt distinctio neque repudiandae explicabo, amet consectetur animi ipsum, mollitia ipsam repellat nobis quia, nostrum. Beatae debitis voluptas aliquam cumque impedit eligendi quae.</p>
+            <p class="is-text-jutify margin-b-1">Repudiandae, repellat pariatur porro praesentium aliquam qui, debitis obcaecati natus, error inventore ad perferendis maxime. Impedit iusto optio illum unde, illo sapiente eum repellat dignissimos deleniti omnis fugit quaerat est dicta quae, repudiandae, ipsam mollitia. Hic esse aspernatur itaque voluptas officiis. Itaque, minus eum voluptates repudiandae in, delectus molestias repellendus?</p>
+        </div>
+    </div>
+    <footer class="color-light padding-3">
+        <row class="is-center is-wrapper">
+            <p class="is-text-center">Script creado por <a href="https://github.com/JorgeAntrax">Leito Winchester Grimes Salvatore</a>.  Licencia <a href="https://github.com/JorgeAntrax/ascroll/blob/master/LICENSE">MIT</a> &copy; 2018</p>
+        </row>
+    </footer>
+    <script src="../js/ascroll.js"></script>
+    <script>
+        let a = new Ascroll();
+    </script>
+</body>
+
+</html>
